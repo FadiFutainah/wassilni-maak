@@ -1,0 +1,40 @@
+name: wassilni_maak
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  sizer: ^2.0.15
+  http: ^0.13.4
+  font_awesome_flutter: ^10.1.0
+  flutter_secure_storage: ^5.0.2
+  mapbox_gl: ^0.16.0
+  location: ^4.4.0
+  dart_code_metrics: ^4.16.0
+  webview_flutter: ^3.0.4
+  web_scraper: ^0.1.4
+  html: ^0.15.0
+  flutter_native_splash: ^2.2.4
+  flutter_bloc: ^8.0.1
+  shared_preferences: ^2.0.15
+  equatable: ^2.0.3
+  modal_bottom_sheet: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
