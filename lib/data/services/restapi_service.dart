@@ -7,14 +7,19 @@ import 'package:wassilni_maak/data/services/rest.dart';
 import 'package:http/http.dart' as http;
 
 class RestApiService extends Rest {
+  RestApiService(super.serverAddress);
+
   @override
-  Future get(String endpoint) async {
+  Future get(
+    String endpoint, {
+    Map<String, String> headers = Rest.defaultHeaders,
+  }) async {
     try {
       var uri = Uri.parse(serverAddress + endpoint);
       var response = await http
           .get(
             uri,
-            headers: defaultHeaders,
+            headers: headers,
           )
           .timeout(timeoutDuration);
       return returnResponse(response);
@@ -23,12 +28,6 @@ class RestApiService extends Rest {
     } on TimeoutException {
       throw WeakInternetConnection();
     }
-  }
-
-  @override
-  Future post(String endpoint, Map<String, dynamic> body) {
-    // TODO: implement postRequest
-    throw UnimplementedError();
   }
 
   dynamic returnResponse(http.Response response) {
