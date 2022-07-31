@@ -7,7 +7,7 @@ import 'package:wassilni_maak/data/services/rest.dart';
 import 'package:http/http.dart' as http;
 
 class RestApiService extends Rest {
-  RestApiService(super.serverAddress);
+  RestApiService(String serverAddress) : super(serverAddress);
 
   @override
   Future get(
@@ -27,6 +27,8 @@ class RestApiService extends Rest {
       throw InternetConnectionException();
     } on TimeoutException {
       throw WeakInternetConnection();
+    } on Exception {
+      throw AppException('اتصال ضعيف بالشبكة');
     }
   }
 
