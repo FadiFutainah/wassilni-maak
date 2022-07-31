@@ -8,9 +8,9 @@
             "name": "wassilni_maak",
             "request": "launch",
             "type": "dart",
-            "env":{
-                "ACCESS_TOKEN":"pk.eyJ1IjoiZmFkaWZ1dGFpbmFoIiwiYSI6ImNsNWFxbjU3aTAwOWszZm9leTZiZTlweDIifQ.7P1NyAWtjqT5Bu3LAWeCHg"
-            }
+            // "env":{
+            //     "ACCESS_TOKEN":"pk.eyJ1IjoiZmFkaWZ1dGFpbmFoIiwiYSI6ImNsNWFxbjU3aTAwOWszZm9leTZiZTlweDIifQ.7P1NyAWtjqT5Bu3LAWeCHg"
+            // }
         },
         {
             "name": "wassilni_maak (profile mode)",

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "12033285511",
+    "project_id": "wassilni-maak",
+    "storage_bucket": "wassilni-maak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12033285511:android:d4e17c5b06e695dea34722",
+        "android_client_info": {
+          "package_name": "com.example.wassilni_maak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12033285511-skuompjin9tl9bn62o93q919td4c3pjn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh6L_oJzixKKE8zZ_4DrnyA2IOrqpFgXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12033285511-skuompjin9tl9bn62o93q919td4c3pjn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
