@@ -1,25 +1,36 @@
-import 'package:wassilni_maak/data/entities/contact_info_dto.dart';
-import 'package:wassilni_maak/data/entities/instructions_dto.dart';
-import 'package:wassilni_maak/data/entities/vehicle_dto.dart';
+import 'package:wassilni_maak/config/exceptions.dart';
+import 'package:wassilni_maak/data/entities/home_data_dto.dart';
 import 'package:wassilni_maak/data/services/restapi_service.dart';
 
 class DataApi {
-  final RestApiService _restApiService = RestApiService('serverAddress');
+  final RestApiService _restApiService =
+      RestApiService('https://wasslnimaak.000webhostapp.com/');
 
-  // TODO implement the following
-  Future<List<VehicleDto>> getVehicles() async {
-    _restApiService.get('endpoint');
-    throw UnimplementedError();
+  Future<HomeDataDto> getHomeData() async {
+    try {
+      var response = await _restApiService.get('api/get_all_data');
+
+      if (response['stauts'] != 200) {
+        throw AppException(response['message']);
+      }
+
+      return HomeDataDto.fromMap(response['data']);
+    } catch (e) {
+      rethrow;
+    }
   }
 
-  Future<InstructionDto> getInstructions() async {
-    throw UnimplementedError();
-  }
+  Future<String> getScript() async {
+    try {
+      var response = await _restApiService.get('api/get_script');
 
-  Future<ContactInfDto> getContactInfo() async {
-    throw UnimplementedError();
-  }
+      if (response['status'] != 200) {
+        throw AppException(response['message']);
+      }
 
-  // TODO study the option below
-  Future getAllData() async {}
+      return response['data'][0];
+    } catch (e) {
+      rethrow;
+    }
+  }
 }
