@@ -8,18 +8,17 @@ class AppException implements Exception {
 }
 
 class FetchDataException extends AppException {
-  FetchDataException(int statusCode)
-      : super('Internal server error $statusCode');
+  FetchDataException(int statusCode) : super('اتصال ضعيف بالشبكة');
 }
 
 class InternetConnectionException extends AppException {
-  InternetConnectionException() : super('No internet connection');
+  InternetConnectionException() : super('لا يوجد اتصال بالشبكة');
 }
 
 class WeakInternetConnection extends AppException {
-  WeakInternetConnection() : super('waek internet connection');
+  WeakInternetConnection() : super('اتصال ضعيف بالشبكة');
 }
 
 class NotFoundException extends AppException {
-  NotFoundException(int statusCode) : super('Not found $statusCode');
+  NotFoundException(int statusCode) : super('يوجد مشكلة في السيرفر');
 }
