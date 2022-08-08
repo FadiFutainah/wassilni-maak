@@ -17,16 +17,22 @@ class InstructionsDialog extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'التعليمات',
-                style: Theme.of(context).textTheme.labelLarge,
+              child: Center(
+                child: Text(
+                  'التعليمات',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
               ),
             ),
             const SizedBox(height: 40),
             SingleChildScrollView(
-              child: Text(
-                instructions,
-                style: Theme.of(context).textTheme.bodySmall,
+              child: Center(
+                child: Text(
+                  instructions,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             ),
           ],

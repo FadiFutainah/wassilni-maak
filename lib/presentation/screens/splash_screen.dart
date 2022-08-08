@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     timer = Timer(
-      const Duration(milliseconds: 4400),
+      const Duration(milliseconds: 4000),
       () => Navigator.of(context).popAndPushNamed('/home'),
     );
     setState(() {});
